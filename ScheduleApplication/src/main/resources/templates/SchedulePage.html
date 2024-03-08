@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timetable Board</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	    <link th:href="@{./CSS/SchedulePage.css}" rel="stylesheet" />
+	
+</head>
+<body>
+<div class="container-fluid mt-5">
+    <table class="table timetable">
+        <thead>
+        <tr>
+            <th>Faculty Name</th>
+            <th style="background-color: #0D1282;">8:00 - 10:00</th>
+            <th style="background-color: #0D1282;">10:00 - 12:00</th>
+            <th style="background-color: #0D1282;">12:00 - 1:00</th>
+            <th style="background-color: #0D1282;">1:00 - 2:00</th>
+            <th style="background-color: #0D1282;">2:00 - 4:00</th>
+            <th style="background-color: #0D1282;">4:00 - 6:00</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+      <tr th:each="faculty : ${faculties}">
+            <td  th:text="${faculty.staffName}" class="facultyName"></td>
+           <td style="background-color: #EEEDED;">
+    <select class="form-select" aria-label="Default select example">
+        <option th:each="user : ${subject}" th:value="${user.subjectId}" th:text="${user.subjectName}"></option>
+    </select>
+</td>
+
+            <td style="background-color: #EEEDED;">
+    <select class="form-select" aria-label="Default select example">
+        <option th:each="user : ${subject}" th:value="${user.subjectId}" th:text="${user.subjectName}"></option>
+    </select>
+</td>
+             <td style="background-color: #EEEDED;">
+    <select class="form-select" aria-label="Default select example">
+        <option th:each="user : ${subject}" th:value="${user.subjectId}" th:text="${user.subjectName}"></option>
+    </select>
+</td>
+            <td style="background-color: #EEEDED;">
+    <select class="form-select" aria-label="Default select example">
+        <option th:each="user : ${subject}" th:value="${user.subjectId}" th:text="${user.subjectName}"></option>
+    </select>
+</td>
+            <td style="background-color: #EEEDED;">
+    <select class="form-select" aria-label="Default select example">
+        <option th:each="user : ${subject}" th:value="${user.subjectId}" th:text="${user.subjectName}"></option>
+    </select>
+</td>
+             <td style="background-color: #EEEDED;">
+    <select class="form-select" aria-label="Default select example">
+        <option th:each="user : ${subject}" th:value="${user.subjectId}" th:text="${user.subjectName}"></option>
+    </select>
+</td>
+<td>
+<button type="submit" class="btn btn-primary">go to someware</button>
+</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

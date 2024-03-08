@@ -31,7 +31,6 @@ public class SubjectController {
 	public List<Subject> fetchSubjectList() {
 		return scheduleInterface.fetchSubjects();
 	}
-
 	@DeleteMapping("/deletesubject/(id)")
 	public ResponseEntity<Long> deleteSubjectId(@PathVariable("id") long id) {
 		long deleteId = scheduleInterface.deleteSubject(id);
