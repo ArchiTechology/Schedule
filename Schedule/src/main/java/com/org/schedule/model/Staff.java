@@ -24,7 +24,8 @@ public class Staff {
 	 private String StaffContact;
 	 private String Password;
 	 private String RePassowrd;
-	 private String Role;
+	
+         private String Address;
 	public Staff(String staffName, String staffEmail, String staffContact, String password, String rePassowrd) {
 	
 		StaffName = staffName;
