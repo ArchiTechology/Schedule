@@ -30,6 +30,7 @@ public class ScheduleController {
 		List<Subject> subject = new ArrayList<Subject>();
 		List<Staff> staff = new ArrayList<Staff>();
 
+		
 		subject = scheduleInterface.fetchSubjects();
 		staff = scheduleInterface.fetchStaffRecords();
 
@@ -45,7 +46,12 @@ public class ScheduleController {
 	}
 
 	@GetMapping("/admin")
-	public ModelAndView getAdminPage() {
+	public ModelAndView getAdminPage(ModelMap modelMap) {
+              String AdminName=  scheduleInterface.findByStaffRole();
+              System.err.println("===>"+AdminName);
+              
+              modelMap.addAttribute("admin", AdminName);
+              
 		return new ModelAndView("Dashboard");
 	}
 

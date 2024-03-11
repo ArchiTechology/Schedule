@@ -7,6 +7,15 @@
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa fa-2x fa-bars" aria-hidden="true"></i>
 </button>
 
+   <span sec:authorize="isAuthenticated" class="  text-center align-items-center  d-flex gap-3 float-right me-3">
+    <div class="user-info">
+            <h3>Welcome [[${admin}]]</h3>
+        </div>
+        <a th:href="@{/logout}" class="d-grid text-center">
+        <img class="profile-logo" alt="employee not found" src="./images/employee.svg"  height="50" width="50">
+                 Logout
+        </a>
+        </span>
 <div class="offcanvas offcanvas-start w-25" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>

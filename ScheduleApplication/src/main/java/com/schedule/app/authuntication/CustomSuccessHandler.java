@@ -27,9 +27,9 @@ public class CustomSuccessHandler implements AuthenticationSuccessHandler {
 		 {
 			 response.sendRedirect("user-page");
 		 }
-		 else if(roles.orElse("").equals("faculty"))
+		 else if(roles.orElse("").equals("trainner"))
 		 {
-			  response.sendRedirect("staff");
+			  response.sendRedirect("faculty");
 		 }
 		 else if(roles.orElse("").equals("schedule"))
 		 {

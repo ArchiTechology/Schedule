@@ -29,4 +29,7 @@ public interface ScheduleInterface {
 	public long deleteStaffRecord(long id);
 
 	public long deleteSubject(long id);
+	
+	 public String findByStaffRole();
+	 
 }

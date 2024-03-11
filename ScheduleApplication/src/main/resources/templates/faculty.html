@@ -1,0 +1,59 @@
+	    <header th:replace="./index.html"></header>
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Welcome [[${faculty}]]</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Grades</a>
+          </li>
+          <li class="nav-item">
+ <a th:href="@{/logout}" class="nav-link">
+                 Logout
+        </a>          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Courses Taught</h5>
+            <p class="card-text">You are currently teaching X courses.</p>
+            <a href="#" class="btn btn-primary">View Courses</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Students</h5>
+            <p class="card-text">You have X students enrolled in your courses.</p>
+            <a href="#" class="btn btn-primary">View Students</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Upcoming Events</h5>
+            <p class="card-text">You have X upcoming events.</p>
+            <a href="#" class="btn btn-primary">View Events</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class AuthonticationController {
 
-	@GetMapping("login")
+	@GetMapping("/login")
 	public ModelAndView Login() {
 		return new ModelAndView("login");
 	}

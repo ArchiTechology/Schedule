@@ -119,4 +119,12 @@ public class ScheduleImplaService implements ScheduleInterface {
 
 	}
 
+	@Override
+	public String findByStaffRole() {
+	    Staff staff = staffRepository.findByStaffRole("admin");
+	    return staff != null ? staff.getStaffName() : null;
+	}
+
+
+
 }
