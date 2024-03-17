@@ -3,6 +3,7 @@ package com.schedule.app.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.schedule.app.dto.ClassRoomDTO;
@@ -26,11 +27,14 @@ public class ScheduleImplaService implements ScheduleInterface {
 	@Autowired
 	ClassRoomRepository classRoomRepository;
 
+	@Autowired
+	public PasswordEncoder passwordEncoder;
+
 	@Override
 	public String addStaffRecords(StaffDTO staffDto) {
 
 		Staff staff = new Staff(staffDto.getStaffName(), staffDto.getStaffEmail(), staffDto.getStaffRole(),
-				staffDto.getStaffPassword());
+				passwordEncoder.encode(staffDto.getStaffPassword()));
 
 		System.out.println(staffDto.toString());
 		try {
