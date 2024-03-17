@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+
+.offcanvas-body{
+	 display:grid;
+	 height:50%;
+	 gap:3vh;
+}
+
+.form-floating , .dropdown {
+	 width:100%;
+	 display:grid;
+}
+
+i{
+	width:20vh;
+}
